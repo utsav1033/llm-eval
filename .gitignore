@@ -1,0 +1,68 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# ======================
+# Virtual Environments
+# ======================
+.venv/
+venv/
+env/
+ENV/
+
+# ======================
+# Package / Build
+# ======================
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# ======================
+# Environment Variables (never commit API keys!)
+# ======================
+.env
+.env.*
+!.env.example
+
+# ======================
+# Testing & Coverage
+# ======================
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ======================
+# Eval Outputs & Data
+# ======================
+results/
+outputs/
+*.jsonl.out
+*.log
+
+# ======================
+# IDE / Editor
+# ======================
+.vscode/
+.idea/
+*.iml
+
+# ======================
+# OS
+# ======================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ======================
+# Type Checking
+# ======================
+.mypy_cache/
+.ruff_cache/
