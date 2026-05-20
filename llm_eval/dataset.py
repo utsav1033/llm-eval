@@ -28,3 +28,9 @@ class Dataset:
                     metadata=data.get("metadata", {}),
                 ))
         return cls(cases=cases)
+
+    def __len__(self):
+        return len(self.cases)
+
+    def __iter__(self):
+        return iter(self.cases)
