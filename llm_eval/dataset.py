@@ -29,6 +29,11 @@ class Dataset:
                 ))
         return cls(cases=cases)
 
+    @classmethod
+    def from_list(cls, items: list[TestCase]) -> "Dataset":
+        return cls(cases=[TestCase(**item) for item in items])
+
+    
     def __len__(self):
         return len(self.cases)
 

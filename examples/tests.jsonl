@@ -1,0 +1,6 @@
+{"input": "My card got charged twice for the same order", "expected": "billing"}
+{"input": "The app crashes every time I try to upload a file", "expected": "technical"}
+{"input": "I can't log into my account, I keep getting an invalid password error", "expected": "invalid"}
+{"input": "It would be great if you could add dark mode to the dashboard", "expected": "feature_request"}
+{"input": "Your support team was incredibly rude and unhelpful during my last call", "expected": "complaint"}
+{"input": "I was billed for the premium plan but I never upgraded", "expected": "billing"}

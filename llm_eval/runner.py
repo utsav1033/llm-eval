@@ -22,11 +22,18 @@ class Runner:
         sem: asyncio.Semaphore,
     ) -> CaseResult:
         async with sem:
-            # Support both sync and async pipeline functions
-            if inspect.iscoroutinefunction(self.llm_fn):
-                output = await self.llm_fn(case.input)
-            else:
-                output = await asyncio.to_thread(self.llm_fn, case.input)
+            try:
+                if inspect.iscoroutinefunction(self.llm_fn):
+                    output = await self.llm_fn(case.input)
+                else:
+                    output = await asyncio.to_thread(self.llm_fn, case.input)
+            except Exception:
+                return CaseResult(
+                    input=case.input,
+                    output="",
+                    expected=case.expected,
+                    scores={s.name: None for s in self.scorers},
+                )
 
             scores = {}
             for scorer in self.scorers:

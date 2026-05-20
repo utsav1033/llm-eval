@@ -1,0 +1,56 @@
+{
+  "scorer_names": [
+    "exact_match"
+  ],
+  "metadata": {},
+  "cases": [
+    {
+      "input": "My card got charged twice for the same order",
+      "output": "billing",
+      "expected": "billing",
+      "scores": {
+        "exact_match": 1.0
+      }
+    },
+    {
+      "input": "The app crashes every time I try to upload a file",
+      "output": "technical",
+      "expected": "technical",
+      "scores": {
+        "exact_match": 1.0
+      }
+    },
+    {
+      "input": "I can't log into my account, I keep getting an invalid password error",
+      "output": "technical",
+      "expected": "account",
+      "scores": {
+        "exact_match": 0.0
+      }
+    },
+    {
+      "input": "It would be great if you could add dark mode to the dashboard",
+      "output": "feature_request",
+      "expected": "feature_request",
+      "scores": {
+        "exact_match": 1.0
+      }
+    },
+    {
+      "input": "Your support team was incredibly rude and unhelpful during my last call",
+      "output": "complaint",
+      "expected": "complaint",
+      "scores": {
+        "exact_match": 1.0
+      }
+    },
+    {
+      "input": "I was billed for the premium plan but I never upgraded",
+      "output": "billing",
+      "expected": "billing",
+      "scores": {
+        "exact_match": 1.0
+      }
+    }
+  ]
+}
